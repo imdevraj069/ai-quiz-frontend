@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/contexts/AuthContext';
-import { AnimatePresence } from 'framer-motion';
+import MotionProvider from './_components/MotionProvider'; // 👈 Import new wrapper
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-slate-50`}>
         <AuthProvider>
-          <AnimatePresence mode="wait">
+          <MotionProvider>
             {children}
-          </AnimatePresence>
+          </MotionProvider>
         </AuthProvider>
       </body>
     </html>
