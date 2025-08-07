@@ -7,7 +7,7 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardFooter, CardTitle } from '@/components/ui/card';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Progress } from '@/components/ui/progress';
+import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Clock, CheckCircle, ArrowRight, ArrowLeft, Trophy, Brain, Loader2, AlertCircle, Sparkles } from 'lucide-react';
 
 // Loading component
@@ -65,7 +65,7 @@ const QuizProgress = ({ current, total, selectedAnswers }) => {
         </span>
       </div>
       <div className="relative">
-        <Progress value={progress} className="h-2" />
+        <ProgressBar value={progress} className="h-2" />
         <motion.div
           className="absolute top-0 left-0 h-2 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full"
           initial={{ width: 0 }}
