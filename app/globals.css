@@ -118,5 +118,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply bg-slate-50;
+    /* Add this for a subtle, modern background */
+    background-image: radial-gradient(circle at top left, #e0e7ff, transparent 40%),
+                      radial-gradient(circle at bottom right, #d1fae5, transparent 50%);
+    background-attachment: fixed;
   }
 }
